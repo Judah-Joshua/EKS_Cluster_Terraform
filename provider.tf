@@ -9,17 +9,17 @@ terraform {
   backend "s3" {
     bucket = "jobucket30"
     key    = "jo/terraform.tfstate"
-    region = "us-east-1"   
+    region = "ap-south-1"   
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 locals {
-  region = "us-east-1"
-  name = "vgs_cluster"
+  region = "ap-south-1"
+  name = "jo_cluster"
   vpc_cidr = "10.123.0.0/16"
   azs      = ["us-east-1a", "us-east-1b"]
   public_subnets  = ["10.123.1.0/24", "10.123.2.0/24"]
